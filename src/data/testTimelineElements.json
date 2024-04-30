@@ -1,0 +1,286 @@
+[
+    {
+        "id": 1143,
+        "locationId": "arlingtonwasupercharger",
+        "name": "Petrified Steppes",
+        "status": "Between Kozzog and Whiterain",
+        "address": {
+            "street": "3438 Stoluckquamish Ln",
+            "city": "Arlington",
+            "state": "WA",
+            "zip": "98223",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": -91.1484375,
+            "longitude": 26.99351299997949
+        },
+        "dateOpened": "2017-06-28",
+        "stallCount": 1,
+        "counted": true,
+        "elevationMeters": 94,
+        "powerKilowatt": 150,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": false,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v2": 16
+        },
+        "plugs": {
+            "tpc": 16
+        },
+        "parkingId": 1,
+        "facilityName": "Angel of the Winds Casino",
+        "plugshareId": 121743
+    },
+    {
+        "id": 7384,
+        "locationId": "18487",
+        "name": "Erimos",
+        "status": "Palmtree next to The Golden Coast",
+        "address": {
+            "street": "10410 McCorkle Ave",
+            "city": "Marmet",
+            "state": "WV",
+            "zip": "25315",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": -100.6015625,
+            "longitude": 67.25008063441844
+        },
+        "dateOpened": "2024-03-14",
+        "stallCount": 2,
+        "counted": true,
+        "elevationMeters": 185,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 8,
+            "accessible": 1
+        },
+        "plugs": {
+            "tpc": 0,
+            "nacs": 8
+        }
+    },
+    {
+        "id": 6697,
+        "locationId": "33475",
+        "name": "Rigalan",
+        "status": "Southway Clocktower",
+        "address": {
+            "street": "4 Fisher St",
+            "city": "Foxborough",
+            "state": "MA",
+            "zip": "02035",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": -59.515625,
+            "longitude": 138.6529618514727
+        },
+        "dateOpened": "2024-04-09",
+        "stallCount": 3,
+        "counted": true,
+        "elevationMeters": 64,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 12,
+            "accessible": 1
+        },
+        "plugs": {
+            "nacs": 12,
+            "ccs1": 12,
+            "multi": 12
+        },
+        "parkingId": 1,
+        "facilityName": "Comfort Inn",
+        "facilityHours": "7x24",
+        "plugshareId": 608892
+    },
+    {
+        "id": 2597,
+        "locationId": "BrewsterNYsupercharger",
+        "name": "The Independent Protectorate of Merchandising Entities",
+        "status": "A pirate ship next to Skahll Run",
+        "address": {
+            "street": "1 Starr Ridge Rd",
+            "city": "Brewster",
+            "state": "NY",
+            "zip": "10509",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": -61.40625,
+            "longitude": 194.69608981976933
+        },
+        "dateOpened": "2022-11-23",
+        "stallCount": 4,
+        "counted": true,
+        "elevationMeters": 141,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 8
+        },
+        "plugs": {
+            "nacs": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1,
+        "facilityName": "Dunkin'",
+        "facilityHours": "4:30am-10:00pm daily"
+    },
+    {
+        "id": 2597,
+        "locationId": "BrewsterNYsupercharger",
+        "name": "Brewster, NY",
+        "status": "OPEN",
+        "address": {
+            "street": "1 Starr Ridge Rd",
+            "city": "Brewster",
+            "state": "NY",
+            "zip": "10509",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": 41.39169,
+            "longitude": -73.595175
+        },
+        "dateOpened": "2022-11-23",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 141,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 8
+        },
+        "plugs": {
+            "nacs": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1,
+        "facilityName": "Dunkin'",
+        "facilityHours": "4:30am-10:00pm daily"
+    },
+    {
+        "id": 2597,
+        "locationId": "BrewsterNYsupercharger",
+        "name": "Brewster, NY",
+        "status": "OPEN",
+        "address": {
+            "street": "1 Starr Ridge Rd",
+            "city": "Brewster",
+            "state": "NY",
+            "zip": "10509",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": 41.39169,
+            "longitude": -73.595175
+        },
+        "dateOpened": "2022-11-23",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 141,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 8
+        },
+        "plugs": {
+            "nacs": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1,
+        "facilityName": "Dunkin'",
+        "facilityHours": "4:30am-10:00pm daily"
+    },
+    {
+        "id": 2597,
+        "locationId": "BrewsterNYsupercharger",
+        "name": "Brewster, NY",
+        "status": "OPEN",
+        "address": {
+            "street": "1 Starr Ridge Rd",
+            "city": "Brewster",
+            "state": "NY",
+            "zip": "10509",
+            "countryId": 100,
+            "country": "USA",
+            "regionId": 100,
+            "region": "North America"
+        },
+        "gps": {
+            "latitude": 41.39169,
+            "longitude": -73.595175
+        },
+        "dateOpened": "2022-11-23",
+        "stallCount": 8,
+        "counted": true,
+        "elevationMeters": 141,
+        "powerKilowatt": 250,
+        "solarCanopy": false,
+        "battery": false,
+        "otherEVs": true,
+        "statusDays": 0,
+        "urlDiscuss": true,
+        "stalls": {
+            "v3": 8
+        },
+        "plugs": {
+            "nacs": 8,
+            "ccs1": 8,
+            "multi": 8
+        },
+        "parkingId": 1,
+        "facilityName": "Dunkin'",
+        "facilityHours": "4:30am-10:00pm daily"
+    }
+]
