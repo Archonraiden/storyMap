@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useEffect, useMemo, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvent, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents, useMapEvent, useMap, Rectangle } from 'react-leaflet'
+import { useEventHandlers, useLeafletContext } from '@react-leaflet/core'
 import './App.css';
 import teslaData from "./data/tesla-sites.json"
 import timelineElements from "./data/timelineElements"
@@ -8,6 +9,76 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import L, { popup } from 'leaflet';
 
 import "react-vertical-timeline-component/style.min.css"
+
+const POSITION_CLASSES: { [key: string]: string } = {
+  bottomleft: 'leaflet-bottom leaflet-left',
+  bottomright: 'leaflet-bottom leaflet-right',
+  topleft: 'leaflet-top leaflet-left',
+  topright: 'leaflet-top leaflet-right',
+}
+
+const BOUNDS_STYLE = { weight: 1 }
+
+function MinimapBounds({ parentMap, zoom }: {parentMap: any, zoom: number}) {
+  const minimap = useMap()
+
+  // Clicking a point on the minimap sets the parent's map center
+  const onClick = useCallback(
+    (e: any) => {
+      parentMap.setView(e.latlng, parentMap.getZoom())
+    },
+    [parentMap],
+  )
+  useMapEvent('click', onClick)
+
+  // Keep track of bounds in state to trigger renders
+  const [bounds, setBounds] = useState(parentMap.getBounds())
+  const onChange = useCallback(() => {
+    setBounds(parentMap.getBounds())
+    // Update the minimap's view to match the parent map's center and zoom
+    minimap.setView(parentMap.getCenter(), zoom)
+  }, [minimap, parentMap, zoom])
+
+  // Listen to events on the parent map
+  const handlers = useMemo(() => ({ move: onChange, zoom: onChange }), [])
+  const context = useLeafletContext();
+  useEventHandlers({ instance: parentMap, context }, handlers)
+
+  return <Rectangle bounds={bounds} pathOptions={BOUNDS_STYLE} />
+}
+
+function MinimapControl({ position, zoom} : {position: string, zoom: number}) {
+  const parentMap = useMap()
+  const mapZoom = zoom
+
+  // Memoize the minimap so it's not affected by position changes
+  const minimap = useMemo(
+    () => (
+      <MapContainer
+        style={{ height: 120, width: 250 }}
+        center={parentMap.getCenter()}
+        zoom={mapZoom}
+        dragging={false}
+        doubleClickZoom={false}
+        scrollWheelZoom={false}
+        attributionControl={false}
+        zoomControl={false}
+        crs={L.CRS.Simple}>
+        <TileLayer url='./tiledTileStitchTifbuildFlattened/{z}/{x}/{y}.png'/>
+        <MinimapBounds parentMap={parentMap} zoom={mapZoom} />
+      </MapContainer>
+    ),
+    [parentMap, mapZoom],
+  )
+
+  const positionClass =
+    (position && POSITION_CLASSES[position]) || POSITION_CLASSES.topright
+  return (
+    <div className={positionClass}>
+      <div className="leaflet-control leaflet-bar">{minimap}</div>
+    </div>
+  )
+}
 
 function SetViewOnClick() {
   const map = useMapEvent('click', (e) => {
@@ -156,6 +227,7 @@ function MapWithTimeline() {
         <TileLayer
           url='./tiledTileStitchTifbuildFlattened/{z}/{x}/{y}.png' noWrap={true} minZoom={0} maxZoom={8}
         />
+        <MinimapControl position="topright" zoom={0} />
         <AddMarkerOnClick/>
         {/* Map the items array to MyMarker components */}
         {testTimelineElements.map((item, index) => {
@@ -175,44 +247,5 @@ function MapWithTimeline() {
     </div>
   );
 }
-
-// function App() {
-
-//   const filteredStations = teslaData.filter(tsla => tsla.address.country === "USA")
-//   return (
-//     <div className="flexbox-container">
-//       <VerticalTimeline className="timeline" layout="1-column-left">
-//         {timelineElements.map((element) => {
-//           return (
-//             <VerticalTimelineElement
-//               key={element.id}
-//               date={element.date}
-//               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-//             >
-//               <h3 className="vertical-timeline-element-title">
-//                 {element.title}
-//               </h3>
-//               <h5 className="vertical-timeline-element-subtitle">
-//                 {element.location}
-//               </h5>
-//               <p id="description">{element.description}</p>
-//             </VerticalTimelineElement>)
-//         })}
-//       </VerticalTimeline>
-//       <MapContainer center={[48.21237,-122.183551]} zoom={9} scrollWheelZoom={false}>
-//         <TileLayer
-//           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//         />
-//         <SetViewOnClick />
-//         {filteredStations.map(tsla => (
-//           <CenterOnClickMarker id={tsla.id} position={[tsla.gps.latitude, tsla.gps.longitude]} name={tsla.name} status={tsla.status} stallCount={tsla.stallCount} />
-//         ))}
-
-
-//       </MapContainer>
-//     </div>
-//   );
-// }
 
 export default MapWithTimeline;
