@@ -1,14 +1,27 @@
 import React, { useCallback, useState, useEffect, useMemo, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents, useMapEvent, useMap, Rectangle } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents, FeatureGroup, useMapEvent, useMap, Rectangle } from 'react-leaflet'
 import { useEventHandlers, useLeafletContext } from '@react-leaflet/core'
 import './App.css';
 import teslaData from "./data/tesla-sites.json"
 import timelineElements from "./data/timelineElements"
 import testTimelineElements from "./data/testTimelineElements.json"
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
+import { EditControl } from 'react-leaflet-draw'
 import L, { popup } from 'leaflet';
+import image1 from './adventureImages/1.png';
+import image2 from './adventureImages/2.png';
+import image3 from './adventureImages/3.png';
+import image4 from './adventureImages/4.png';
+import image5 from './adventureImages/5.png';
+import image6 from './adventureImages/6.png';
+import image7 from './adventureImages/7.png';
+import image8 from './adventureImages/8.png';
+// import "leaflet/dist/leaflet.css"
+import "leaflet-draw/dist/leaflet.draw.css"
 
 import "react-vertical-timeline-component/style.min.css"
+
+const images = [image1, image2, image3, image4, image5, image6, image7, image8]
 
 const POSITION_CLASSES: { [key: string]: string } = {
   bottomleft: 'leaflet-bottom leaflet-left',
@@ -18,6 +31,19 @@ const POSITION_CLASSES: { [key: string]: string } = {
 }
 
 const BOUNDS_STYLE = { weight: 1 }
+
+function AddLines() {
+  const map = useMap();
+  // var polyLinePoints = [
+  //   [-91.1484375, 26.99351299997949],
+  //   [-100.6015625, 67.25008063441844]
+  // ];
+
+  L.polyline([[-91.1484375, 26.99351299997949], [-100.6015625, 67.25008063441844]]).addTo(map);
+
+  return null
+}
+
 
 function MinimapBounds({ parentMap, zoom }: {parentMap: any, zoom: number}) {
   const minimap = useMap()
@@ -189,46 +215,74 @@ function MapWithTimeline() {
     }
   }, [activeIndex]);
 
-  useEffect(() => {
-    if (mapRef.current) {
-      mapRef.current.on('click', function (event) {
-        // if (mapRef.current) mapRef.current.setView(event.latlng, 4)
-        console.log(event.latlng);
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (mapRef.current) {
+  //     mapRef.current.on('click', function (event) {
+  //       if (mapRef.current) mapRef.current.setView(event.latlng, 4)
+  //       console.log(event.latlng);
+  //     });
+  //   }
+  // }, []);
   
   return (
     <div className="flexbox-container">
-      <VerticalTimeline className="timeline" layout="1-column-left">
+      <VerticalTimeline className="timeline" layout="1-column-left"> 
         {/* Map the items array to VerticalTimelineElement components */}
-        {testTimelineElements.map((item, index) => (
-          <VerticalTimelineElement
+        {testTimelineElements.map((item, index) => {
+          // var imageName = require('./adventureImages/' + (index + 1).toString() + '.png');
+          return (<VerticalTimelineElement
             id={`vertical-timeline-item-${index}`}
             key={index}
             className={!!(index === 0) ? 'active' : ''}
             date={item.dateOpened}
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            dateClassName={"timelineDate"}
+            contentStyle={{ background: '#6d4d25', color: '#fff' }}
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           >
-            <h3 className="vertical-timeline-element-title">{item.name}</h3>
-            <h4 className="vertical-timeline-element-subtitle">{item.status}</h4>
+            <h1 className="vertical-timeline-element-title">{item.name}</h1>
+            
+            <img src={images[index]} width={470} height={470}/>
             <p>
-              {item.stallCount}
+              {item.description}
             </p>
           </VerticalTimelineElement>
-        ))}
+          );
+        })}
       </VerticalTimeline>
       <MapContainer ref={mapRef} 
-        center={[-55.75, 130.13609890147245
-        ]} zoom={3} scrollWheelZoom={true} zoomControl={true}
+        center={[-23.09375, 45.04705225829449]} zoom={8} scrollWheelZoom={true} zoomControl={false}
         crs={L.CRS.Simple}
         >
         <TileLayer
           url='./tiledTileStitchTifbuildFlattened/{z}/{x}/{y}.png' noWrap={true} minZoom={0} maxZoom={8}
         />
         <MinimapControl position="topright" zoom={0} />
-        <AddMarkerOnClick/>
+        {/* <FeatureGroup>
+          <EditControl
+            position='topleft'
+            // onEdited={this._onEditPath}
+            // onDeleted={this._onDeleted}
+            draw={{
+              rectangle: true,
+              polyline: true,
+              circle: true,
+              circlemarker: true,
+              marker: true,
+              polygon: {
+                allowIntersection: false,
+                drawError: {
+                  color: '#e1e100',
+                  message: "<strong>Oh noes! You can't draw that!",
+                },
+                shapeOptions: {
+                  color: '#bada55',
+                },
+              },
+            }}
+          />
+        </FeatureGroup>
+        <AddLines/>
+        <AddMarkerOnClick/> */}
         {/* Map the items array to MyMarker components */}
         {testTimelineElements.map((item, index) => {
           return (
@@ -237,7 +291,7 @@ function MapWithTimeline() {
                 <div>
                   <h2>{"Location: " + item.name}</h2>
                   <p>{item.status}</p>
-                  <p>{"Story Item Number: " + item.stallCount}</p>
+                  <p>{"Story Item Number: " + item.description}</p>
                 </div>
               </Popup>
             </Marker>

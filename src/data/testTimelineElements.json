@@ -1,286 +1,82 @@
 [
     {
-        "id": 1143,
-        "locationId": "arlingtonwasupercharger",
-        "name": "Petrified Steppes",
+        "name": "Falkenfors",
         "status": "Between Kozzog and Whiterain",
-        "address": {
-            "street": "3438 Stoluckquamish Ln",
-            "city": "Arlington",
-            "state": "WA",
-            "zip": "98223",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": -91.1484375,
-            "longitude": 26.99351299997949
+            "latitude": -23.09375, 
+            "longitude": 45.04705225829449
         },
-        "dateOpened": "2017-06-28",
-        "stallCount": 1,
-        "counted": true,
-        "elevationMeters": 94,
-        "powerKilowatt": 150,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": false,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v2": 16
-        },
-        "plugs": {
-            "tpc": 16
-        },
-        "parkingId": 1,
-        "facilityName": "Angel of the Winds Casino",
-        "plugshareId": 121743
+        "dateOpened": "40th of Spring, 893, 2nd Age",
+        "description": "In the shadow of dawn, the tranquility of Falkenfors was shattered as the Hvid Flamme clan fell victim to a brutal betrayal by their supposed allies, the Oprullet Slange. With their stronghold ravaged and the air thick with smoke and loss, only a handful of clan members survived the onslaught. United by grief and a burning desire for justice, these survivors vowed to seek aid from the mighty Clan King Skallagrim, who ruled the isles from his distant throne. Their journey began amid the ruins of their once-thriving home, now a silent testament to treachery."
     },
     {
-        "id": 7384,
-        "locationId": "18487",
-        "name": "Erimos",
+        "name": "Forests around Falkenfors",
         "status": "Palmtree next to The Golden Coast",
-        "address": {
-            "street": "10410 McCorkle Ave",
-            "city": "Marmet",
-            "state": "WV",
-            "zip": "25315",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": -100.6015625,
-            "longitude": 67.25008063441844
+            "latitude": -21.53515625,
+            "longitude": 45.76577643444161
         },
-        "dateOpened": "2024-03-14",
-        "stallCount": 2,
-        "counted": true,
-        "elevationMeters": 185,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 8,
-            "accessible": 1
-        },
-        "plugs": {
-            "tpc": 0,
-            "nacs": 8
-        }
+        "dateOpened": "41st of Spring, 893, 2nd Age",
+        "description": "As dawn broke over the dense forests surrounding Falkenfors, the remnants of the Hvid Flamme found themselves fugitives in their own land, relentlessly pursued by the formidable warrior Ragneid. Employing dark magic, Ragneid commanded a flock of sinister crow spies that shadowed every move of the fleeing clan members, their ominous caws a constant reminder of the danger lurking behind."
     },
     {
-        "id": 6697,
-        "locationId": "33475",
-        "name": "Rigalan",
+        "name": "Ford on the Bredt Vand",
         "status": "Southway Clocktower",
-        "address": {
-            "street": "4 Fisher St",
-            "city": "Foxborough",
-            "state": "MA",
-            "zip": "02035",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": -59.515625,
-            "longitude": 138.6529618514727
+            "latitude": -23.2734375, 
+            "longitude": 46.03140185548269
         },
-        "dateOpened": "2024-04-09",
-        "stallCount": 3,
-        "counted": true,
-        "elevationMeters": 64,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 12,
-            "accessible": 1
-        },
-        "plugs": {
-            "nacs": 12,
-            "ccs1": 12,
-            "multi": 12
-        },
-        "parkingId": 1,
-        "facilityName": "Comfort Inn",
-        "facilityHours": "7x24",
-        "plugshareId": 608892
+        "dateOpened": "43rd of Spring, 893, 2nd Age",
+        "description": "The relentless chase led to a heart-stopping encounter at a ford on the Bredt Vand river. Here, Ragneid and his mercenaries launched a surprise attack, hoping to capture the beleaguered Hvid Flamme. Through a mixture of sheer will and desperate cunning, the clan members managed a narrow escape, their spirits wearied yet unbroken, as they continued their perilous trek towards uncertain salvation."
     },
     {
-        "id": 2597,
-        "locationId": "BrewsterNYsupercharger",
-        "name": "The Independent Protectorate of Merchandising Entities",
+        "name": "Ikkne Hall",
         "status": "A pirate ship next to Skahll Run",
-        "address": {
-            "street": "1 Starr Ridge Rd",
-            "city": "Brewster",
-            "state": "NY",
-            "zip": "10509",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": -61.40625,
-            "longitude": 194.69608981976933
+            "latitude": -21.375, 
+            "longitude": 48.68371879920063
         },
-        "dateOpened": "2022-11-23",
-        "stallCount": 4,
-        "counted": true,
-        "elevationMeters": 141,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 8
-        },
-        "plugs": {
-            "nacs": 8,
-            "ccs1": 8,
-            "multi": 8
-        },
-        "parkingId": 1,
-        "facilityName": "Dunkin'",
-        "facilityHours": "4:30am-10:00pm daily"
+        "dateOpened": "45th of Spring, 893, 2nd Age",
+        "description": "Relief came unexpectedly when the weary travelers reached the formidable gates of Ikkne Hall, stronghold of the Stor Hjort clan. Here, the noble chieftain, recognizing the dire plight of the Hvid Flamme, offered them clandestine aid. With new mounts and whispered promises of a safe passage to Hankaa, where a ship awaited to ferry them to their final destination, Eyrr, the clan felt a flicker of hope amidst their despair."
     },
     {
-        "id": 2597,
-        "locationId": "BrewsterNYsupercharger",
-        "name": "Brewster, NY",
+        "name": "Village of Elsyy",
         "status": "OPEN",
-        "address": {
-            "street": "1 Starr Ridge Rd",
-            "city": "Brewster",
-            "state": "NY",
-            "zip": "10509",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": 41.39169,
-            "longitude": -73.595175
+            "latitude": -22.16015625, 
+            "longitude": 52.71884978673586
         },
-        "dateOpened": "2022-11-23",
-        "stallCount": 8,
-        "counted": true,
-        "elevationMeters": 141,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 8
-        },
-        "plugs": {
-            "nacs": 8,
-            "ccs1": 8,
-            "multi": 8
-        },
-        "parkingId": 1,
-        "facilityName": "Dunkin'",
-        "facilityHours": "4:30am-10:00pm daily"
+        "dateOpened": "45th of Spring, 893, 2nd Age",
+        "description": "The same day brought them to the quaint village of Elsyy, where destiny introduced them to Guillermo, a brilliant and spirited young man. His skills were soon put to the test as the Oprullet Slange launched another vicious attack. Side by side with the Hvid Flamme, Guillermo proved his mettle, turning the tide of battle and forging a new bond of camaraderie and respect among the warriors."
     },
     {
-        "id": 2597,
-        "locationId": "BrewsterNYsupercharger",
-        "name": "Brewster, NY",
+        "name": "Selaca Stay",
         "status": "OPEN",
-        "address": {
-            "street": "1 Starr Ridge Rd",
-            "city": "Brewster",
-            "state": "NY",
-            "zip": "10509",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": 41.39169,
-            "longitude": -73.595175
+            "latitude": -22.87109375,
+            "longitude": 53.06258743619752
         },
-        "dateOpened": "2022-11-23",
-        "stallCount": 8,
-        "counted": true,
-        "elevationMeters": 141,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 8
-        },
-        "plugs": {
-            "nacs": 8,
-            "ccs1": 8,
-            "multi": 8
-        },
-        "parkingId": 1,
-        "facilityName": "Dunkin'",
-        "facilityHours": "4:30am-10:00pm daily"
+        "dateOpened": "45th of Spring, 893, 2nd Age",
+        "description": "Exhausted yet victorious, the clan sought brief respite at the bustling inn of Selaca Stay. Aware of the many prying eyes and the omnipresent threat of betrayal, their stay was cautious and fleeting, a mere pause in their relentless journey towards safety."
     },
     {
-        "id": 2597,
-        "locationId": "BrewsterNYsupercharger",
-        "name": "Brewster, NY",
+        "name": "Hannkaa",
         "status": "OPEN",
-        "address": {
-            "street": "1 Starr Ridge Rd",
-            "city": "Brewster",
-            "state": "NY",
-            "zip": "10509",
-            "countryId": 100,
-            "country": "USA",
-            "regionId": 100,
-            "region": "North America"
-        },
         "gps": {
-            "latitude": 41.39169,
-            "longitude": -73.595175
+            "latitude": -25.8671875,
+            "longitude": 55.293092115036316
         },
-        "dateOpened": "2022-11-23",
-        "stallCount": 8,
-        "counted": true,
-        "elevationMeters": 141,
-        "powerKilowatt": 250,
-        "solarCanopy": false,
-        "battery": false,
-        "otherEVs": true,
-        "statusDays": 0,
-        "urlDiscuss": true,
-        "stalls": {
-            "v3": 8
+        "dateOpened": "50th of Spring, 893, 2nd Age",
+        "description": "Finally, the survivors arrived in the bustling trade city of Hankaa, stronghold of the Rod Folk clan. Under the cloak of night, they met with a discreet contact who provided them with a sturdy longship. With the tang of salt air and the promise of open seas before them, they prepared to set sail for Eyrr, their hearts heavy with the weight of their ordeal yet buoyed by the prospect of nearing their journey's end."
+    },
+    {
+        "name": "Eyrr",
+        "status": "OPEN",
+        "gps": {
+            "latitude": -16.4765625,
+            "longitude": 57.390825555900896
         },
-        "plugs": {
-            "nacs": 8,
-            "ccs1": 8,
-            "multi": 8
-        },
-        "parkingId": 1,
-        "facilityName": "Dunkin'",
-        "facilityHours": "4:30am-10:00pm daily"
+        "dateOpened": "57th of Spring, 893, 2nd Age",
+        "description": "Upon their tumultuous arrival in the grand city of Eyrr, the Hvid Flamme were met not with allies but with the shocking revelation that their attackers had been none other than the king’s own clan, disguised as the Oprullet Slange. This grim discovery ignited the flames of a new Clan War, a conflict that would once again test the resilience and resolve of the Hvid Flamme as they fought not only for revenge but for the very soul of their homeland."
     }
 ]

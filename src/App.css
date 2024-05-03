@@ -1,16 +1,32 @@
 .timeline{
   overflow-y: scroll;
-  background-color: slategray;
+  background-color: #772E07;
   padding-bottom: 200px;
 }
 .active{
   opacity: 1 !important;
 }
+
+.timelineDate {
+  font-size: medium;
+}
+
 .vertical-timeline-element {
   opacity: 0.25;
+  
 }
+
+.vertical-timeline-element-title {
+  text-align: center;
+  color: #D3A34E;
+  font-size:60px;
+  font-family:serif;
+  
+}
+
 .vertical-timeline {
-  padding-bottom:200px !important;
+  padding-bottom:400px !important;
+  
 }
 .flexbox-container{
   display: flex;
@@ -18,6 +34,6 @@
   height: 100vh;
 }
 .leaflet-container{
-  width: 250vw;
+  width: 220vw;
   height: 100vh;
 }
